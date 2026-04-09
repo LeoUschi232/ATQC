@@ -1,1 +1,61 @@
+# IDE project files and huge python virtual environment
+cmake-build-debug
+.idea
+.vscode
 .venv
+
+# CMake-generated files
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/
+
+# Build artifacts
+CTestTestfile.cmake
+libCliffordTableausLib.a
+
+# Local QC Python simulation for computing expectation values
+qc-simulation
+
+# Object files and intermediate files
+*.o
+*.so
+*.a
+*.dylib
+*.exe
+*.out
+*.log
+*.tmp
+
+# Ignore LaTeX auxiliary and compilation files
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# Ignore specific log files for your project
+compilation_log.txt
+
+# Ignore all files from latexmk (if using latexmkrc)
+latexmkrc
+
+# Ignore presentation-specific auxiliary files
+Presentation/tum/*.bbl
+Presentation/tum/*.blg
+Presentation/tum/*.log
+Presentation/tum/*.aux
+Presentation/tum/*.out
+Presentation/tum/*.run.xml
+Presentation/tum/*.toc
+Presentation/tum/*.snm
+Presentation/tum/*.nav
+Presentation/tum/*.vrb

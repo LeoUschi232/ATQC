@@ -1,0 +1,148 @@
+\documentclass[english,aspectratio=169]{tumbeamer}
+
+
+% Packages with no parameters
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{braket}
+\usepackage{dsfont}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{multirow}
+
+% Packages with parameters
+\usepackage[left=15mm, right=15mm, top=7mm, bottom=7mm]{geometry}
+\usepackage{footmisc}
+\renewcommand{\footnotemargin}{0.5em}
+\setlength{\footnotesep}{0.2em}
+\usepackage{natbib}
+\setlength{\bibsep}{0pt}
+
+
+% Personlized math operators
+\DeclareMathOperator{\tacticalAnd}{\qquad\land\qquad}
+\DeclareMathOperator{\means}{\quad\Longrightarrow\quad}
+\DeclareMathOperator{\imply}{\Longrightarrow\qquad}
+\DeclareMathOperator{\equi}{\Longleftrightarrow\qquad}
+\DeclareMathOperator{\equivalent}{\quad\Longleftrightarrow\quad}
+\DeclareMathOperator{\holds}{\text{ holds: }}
+\DeclareMathOperator{\suchthat}{\text{ such that }}
+\DeclareMathOperator{\into}{\text{ in }}
+\DeclareMathOperator{\with}{\text{ with }}
+\DeclareMathOperator{\aand}{\text{ and }}
+\DeclareMathOperator{\natur}{\mathbb{N}}
+\DeclareMathOperator{\real}{\mathbb{R}}
+\DeclareMathOperator{\rationa}{\mathbb{Q}}
+\DeclareMathOperator{\whole}{\mathbb{Z}}
+\DeclareMathOperator{\divv}{\,\text{DIV}\,}
+\DeclareMathOperator{\modd}{\,\text{MOD}\,}
+\DeclareMathOperator{\argmax}{\text{argmax}}
+\DeclareMathOperator{\argmin}{\text{argmin}}
+\DeclareMathOperator{\sign}{\text{sign}}
+
+
+\newcommand{\fullfootcite}[1]{%
+    \begin{spacing}{0.5}%
+    {%
+        \footnotesize%
+        \cite*{#1}
+        \fullcite{#1}%
+    }%
+    \end{spacing}%
+}
+\newcommand{\tinyfullfootcite}[1]{%
+    \begin{spacing}{0.5}%
+    {%
+        \tiny%
+        \cite*{#1}
+        \fullcite{#1}%
+    }%
+    \end{spacing}%
+}
+
+
+% presentation metadata
+\title{Clifford Tableaus and \\ the Stabilizer Algorithm}
+\subtitle{}
+\author{Leonard Uscinowicz}
+
+\institute{\theChairName\\\theDepartmentName\\\theUniversityName}
+\date[20/12/2024]{December 20\textsuperscript{th}, 2024}
+
+\footline{\insertauthor~|~\insertshorttitle~|~\insertshortdate}
+
+% macro to configure the style of the presentation
+\TUMbeamersetup{
+    title page = TUM tower,
+    part page = TUM toc,
+    section page = TUM toc,
+    content page = TUM more space,
+    tower scale = 1.0,
+    headline = TUM threeliner,
+    footline = TUM default,
+    headline on = {title page},
+    footline on = {every page, title page=false},
+}
+
+\usepackage{biblatex}
+\usepackage{mathtools}
+\addbibresource{bibliography.bib}
+\setlength{\bibsep}{0pt}
+
+\begin{document}
+    \renewcommand{\theChairName}{\(\qquad\)}
+    \renewcommand{\theDepartmentName}{\(\qquad\)}
+    \maketitle
+
+
+    \section{Preliminary Definitions}
+    \label{sec:preliminary-definitions}
+
+    \input{frameset1_PauliMatrices}
+
+    \input{frameset2_GroupTheory}
+
+    \input{frameset3_PauliGroup}
+
+    \input{frameset4_GroupGenerators}
+
+
+    \section{Stabilizer Formalism}
+    \label{sec:stabilizer-formalism}
+
+    \input{frameset5_StabilizerGroups}
+
+    \input{frameset6_StabilizerConditions}
+
+    \input{frameset7_CheckMatrix}
+
+    \input{frameset8_UnitaryOperations}
+
+    \input{frameset9_Measurement}
+
+
+    \section{Stabilizer Algorithm}
+    \label{sec:stabilizer-algorithm}
+
+    \input{frameset10_GottesmanKnillTheorem}
+
+    \input{frameset11_StabilizerCircuit}
+
+    \input{frameset12_CliffordTableau}
+
+    \input{frameset13_HadamardGateAlgorithm}
+
+    \input{frameset14_PhaseGateAlgorithm}
+
+    \input{frameset15_MeasurementAlgorithm}
+
+    \input{frameset16_Advantages}
+
+    \begin{frame}{References}
+        \printbibliography
+    \end{frame}
+\end{document}
